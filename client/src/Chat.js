@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react"
 
 function Chat({socket, username, room}) {
   var colors = [
-    ["242325", "DC965A"], ["242325", "BBB891"], ["F1F7ED", "54494B"], ["F1F7ED", "B33951"], ["54494B", "E3D081"],
-    ["4A5859", "F4D6CC"], ["EDFFEC", "5A5766"], ["EDDDD4", "283D3B"], ["EDDDD4", "C44536"], ["420039", "A9A587"],
-    ["271F30", "A1CDF1"]
+    ["242325", "DC965A"], ["242325", "BBB891"], ["F1F7ED", "54494B"],
+    ["F1F7ED", "B33951"], ["54494B", "E3D081"], ["4A5859", "F4D6CC"],
+    ["EDFFEC", "5A5766"], ["EDDDD4", "283D3B"], ["EDDDD4", "C44536"],
+    ["420039", "A9A587"], ["271F30", "A1CDF1"]
   ]
 
   const [currentMessage, setCurrentMessage] = useState("")
