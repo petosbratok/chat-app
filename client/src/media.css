@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .wrapper{
+    align-items: center;
+    padding-left: 0;
+  }
+  .title{
+    width: 200px;
+    text-align: center;
+  }
+  .input{
+    padding-left: 10px;
+  }
+}

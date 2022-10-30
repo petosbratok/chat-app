@@ -1,8 +1,9 @@
-
 import './main.css';
+import './media.css';
+import Chat from "./Chat.js"
+
 import io from "socket.io-client";
 import { useState } from "react";
-import Chat from "./Chat.js"
 const socket = io.connect("http://localhost:3001");
 
 function App() {
@@ -21,19 +22,17 @@ function App() {
     <div className="App">
       {!showChat
         ? (
-          <div>
-            <h3>Message.io</h3>
-            <input type="text" placeholder="Username" onChange={(event) => {setUsername(event.target.value)}}></input>
-            <input type="text" placeholder="Room id" onChange={(event) => {setRoom(event.target.value)}}></input>
-            <button onClick={joinRoom}>Start</button>
+          <div className="wrapper">
+            <h3 className="title">Message.io</h3>
+            <input className="input" type="text" placeholder="Username" onChange={(event) => {setUsername(event.target.value)}}></input>
+            <input className="input" type="text" placeholder="Room id" onChange={(event) => {setRoom(event.target.value)}}></input>
+            <button className="button" onClick={joinRoom}><span>Start</span></button>
           </div>
         ) : (
           <div>
             <Chat socket={socket} username={username} room={room} />
           </div>
         )
-      }
-
       }
     </div>
   );
