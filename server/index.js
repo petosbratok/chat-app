@@ -10,7 +10,7 @@ const server = http.createServer(app)
 
 const io = new Server(server, {
   cors: {
-    origin: "https://gorgeous-eclair-cdb19b.netlify.app",
+    origin: "*",
     methods: ["GET", "POST"],
   }
 })
@@ -32,6 +32,6 @@ io.on("connection", (socket) => {
   })
 })
 
-server.listen(process.env.PORT ||  port, () => {
+server.listen(port, () => {
   console.log('SERVER RUNNING at', port)
 })

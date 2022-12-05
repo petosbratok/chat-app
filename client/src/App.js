@@ -4,7 +4,7 @@ import Chat from "./Chat.js"
 
 import io from "socket.io-client";
 import { useState } from "react";
-const socket = io.connect("https://gentle-bayou-70074.herokuapp.com/");
+const socket = io.connect("http://127.0.0.1:3001/");
 
 function App() {
   const [username, setUsername] = useState("")
